@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/jpeg.webp") center / cover fixed;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.logo {
+  width: 42px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.navbar-menu a:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem;
+}
+
+.details {
+  max-width: 850px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.details h2 {
+  margin-bottom: 1rem;
+}
+
+.details dl {
+  margin-bottom: 1rem;
+}
+
+.details dt {
+  font-weight: bold;
+}
+
+.details dd {
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.synopsis-text {
+  margin-top: 1rem;
+}
+
+.featured-art {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.gallery-img:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 20px 40px rgba(0, 102, 204, 0.4);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 12px;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.nav:hover {
+  color: #00aaff;
+}
